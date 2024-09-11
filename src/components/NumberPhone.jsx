@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import "./NumberPhone.css";
 import Swal from "sweetalert2"; // Importa SweetAlert2
@@ -6,61 +6,30 @@ import Swal from "sweetalert2"; // Importa SweetAlert2
 function NumberPhone() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const navigate = useNavigate(); // Hook de navegación
+  const beepRef = useRef(null); // Ref para manejar el audio del beep
 
   const phoneNumbers = [
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Emergencias",
-      subtitle: "911",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Denuncias anónimas",
-      subtitle: "089",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Policia Cibernética",
-      subtitle: "800221484",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Fiscalía de adolescentes",
-      subtitle: "9616396011",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Fiscalía de la mujer",
-      subtitle: "9616172300-7427",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Fiscalía de víctimas desaparecidas",
-      subtitle: "9616172300-17541",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Fiscalía de la mujer",
-      subtitle: "9616172300-7427",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Centro para la prevención de adicciones (CENTRA)",
-      subtitle: "9616172300-17496",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Módulo de atención inmediata (MAI)",
-      subtitle: "9616125511-3503",
-    },
-    {
-      image: "/src/assets/img/numbers/1.png",
-      title: "Centro de integración juvenil (CIJ)",
-      subtitle: "9616181851",
-    },
+    { image: "/src/assets/img/numbers/1.png", title: "Emergencias", subtitle: "911" },
+    { image: "/src/assets/img/numbers/1.png", title: "Denuncias anónimas", subtitle: "089" },
+    { image: "/src/assets/img/numbers/1.png", title: "Policia Cibernética", subtitle: "800221484" },
+    { image: "/src/assets/img/numbers/1.png", title: "Fiscalía de adolescentes", subtitle: "9616396011" },
+    { image: "/src/assets/img/numbers/1.png", title: "Fiscalía de la mujer", subtitle: "9616172300-7427" },
+    { image: "/src/assets/img/numbers/1.png", title: "Fiscalía de víctimas desaparecidas", subtitle: "9616172300-17541" },
+    { image: "/src/assets/img/numbers/1.png", title: "Fiscalía de la mujer", subtitle: "9616172300-7427" },
+    { image: "/src/assets/img/numbers/1.png", title: "Centro para la prevención de adicciones (CENTRA)", subtitle: "9616172300-17496" },
+    { image: "/src/assets/img/numbers/1.png", title: "Módulo de atención inmediata (MAI)", subtitle: "9616125511-3503" },
+    { image: "/src/assets/img/numbers/1.png", title: "Centro de integración juvenil (CIJ)", subtitle: "9616181851" },
   ];
-  
+
   const handleButtonClick = (value) => {
+    // Reproduce el sonido de beep
+    if (beepRef.current) {
+      beepRef.current.currentTime = 0; // Reinicia el audio
+      beepRef.current.play().catch((error) => {
+        console.error("Error al reproducir el beep:", error);
+      });
+    }
+
     if (value === "borrar") {
       setPhoneNumber(phoneNumber.slice(0, -1)); // Elimina el último dígito
     } else {
@@ -72,9 +41,8 @@ function NumberPhone() {
     const foundNumber = phoneNumbers.find((item) => item.subtitle === phoneNumber);
     
     if (foundNumber) {
-      // Redirige al usuario a la página correspondiente
-      const index = phoneNumbers.indexOf(foundNumber); // Obtiene el índice del número encontrado
-      navigate(`/Numbers/${index}`); // Redirige a la página con el índice
+      const index = phoneNumbers.indexOf(foundNumber);
+      navigate(`/Numbers/${index}`);
     } else {
       Swal.fire({
         icon: "error",
@@ -87,6 +55,9 @@ function NumberPhone() {
 
   return (
     <div className="telefono-exterior">
+      {/* Control de audio oculto para el sonido de beep */}
+      <audio ref={beepRef} src="/src/assets/audio/bib.mp3" style={{ display: "none" }}></audio>
+      
       <div className="telefono-camara"></div>
       <div className="telefono-pantalla">
         <div className="telefono-contenido">
