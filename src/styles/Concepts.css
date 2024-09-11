@@ -1,0 +1,90 @@
+.concepts {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.concepts {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .concepts .section-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 2%;
+    box-sizing: border-box;
+  }
+  
+  
+  .concepts .libreta {
+    width: 70%;
+    height: 80%;
+    background-color: #f9f5dc; /* Color de fondo estilo libreta */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 25px solid brown;
+  }
+  
+  .concepts .libreta-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.5s ease;
+  }
+  
+  .concepts  .libreta-imagen {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .concepts .libreta-texto {
+    margin-top: 10px;
+  }
+  
+  .concepts  .libreta-texto h3 {
+    font-size: 50px;
+    margin: 0;
+  }
+  
+  .concepts .libreta-texto p {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    color: blue;
+  }
+  
+  .concepts  .carousel-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    z-index: 1;
+
+    font-size: 40px;
+  }
+  
+  .concepts .carousel-button:hover {
+    background-color: cadetblue;
+    transform: scale(1.2);
+  }
+  
