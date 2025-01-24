@@ -2,10 +2,6 @@
   "name": "telefonopreventivo",
   "version": "1.0.0",
   "description": "Aplicación educativa para niños sobre el uso del teléfono preventivo",
-  "author": {
-    "name": "Luis Daniel",
-    "email": "tu@email.com"
-  },
   "private": true,
   "type": "module",
   "main": "main.js",
@@ -62,8 +58,8 @@
       "createStartMenuShortcut": true,
       "shortcutName": "Telefono Preventivo",
       "uninstallDisplayName": "Telefono Preventivo",
-      "installerIcon": "build/icon.ico",
-      "uninstallerIcon": "build/icon.ico",
+      "installerIcon": "build/icon-installer.ico",
+      "uninstallerIcon": "build/icon-uninstaller.ico",
       "installerHeaderIcon": "build/icon.ico",
       "artifactName": "${productName}-Setup-${version}.${ext}",
       "installerLanguages": ["es-ES"],

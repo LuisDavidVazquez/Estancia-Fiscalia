@@ -13,7 +13,7 @@ function Logos() {
       >
         <img src="assets/img/upchiapas.png" alt="" />
         <img
-          src="assets/img/logoFiscalia.png"
+          src="assets/img/logoFiscalia2.jpg"
           style={{ backgroundColor: "white" }}
           alt=""
         />
