@@ -29,7 +29,7 @@ function Numbers() {
     {
       image: "assets/img/numbers/5.png",
       title: "Fiscalía de la mujer",
-      subtitle: "961 617 23 00-7427",
+      subtitle: "961 617 23 00-17427",
     },
     {
       image: "assets/img/numbers/6.png",
