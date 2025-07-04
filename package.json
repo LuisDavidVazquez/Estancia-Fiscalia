@@ -26,6 +26,7 @@
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "electron": "^34.0.0",
+    "electron-builder": "^26.0.12",
     "electron-packager": "^17.1.2",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.2",
@@ -62,7 +63,9 @@
       "uninstallerIcon": "build/icon-uninstaller.ico",
       "installerHeaderIcon": "build/icon.ico",
       "artifactName": "${productName}-Setup-${version}.${ext}",
-      "installerLanguages": ["es-ES"],
+      "installerLanguages": [
+        "es-ES"
+      ],
       "language": "3082"
     }
   }
