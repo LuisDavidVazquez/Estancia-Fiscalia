@@ -19,7 +19,7 @@ function Numbers() {
     {
       image: "assets/img/numbers/3.png",
       title: "Policia Cibernética",
-      subtitle: "800 221 484",
+      subtitle: "800 221 1484",
     },
     {
       image: "assets/img/numbers/4.png",

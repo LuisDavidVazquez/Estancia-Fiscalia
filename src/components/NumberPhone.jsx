@@ -11,11 +11,10 @@ function NumberPhone() {
   const phoneNumbers = [
     { image: "assets/img/numbers/1.png", title: "Emergencias", subtitle: "911" },
     { image: "assets/img/numbers/1.png", title: "Denuncias anónimas", subtitle: "089" },
-    { image: "assets/img/numbers/1.png", title: "Policia Cibernética", subtitle: "800221484" },
+    { image: "assets/img/numbers/1.png", title: "Policia Cibernética", subtitle: "8002211484" },
     { image: "assets/img/numbers/1.png", title: "Fiscalía de adolescentes", subtitle: "9616396011" },
-    { image: "assets/img/numbers/1.png", title: "Fiscalía de la mujer", subtitle: "9616172300-7427" },
+    { image: "assets/img/numbers/1.png", title: "Fiscalía de la mujer", subtitle: "9616172300-17427" },
     { image: "assets/img/numbers/1.png", title: "Fiscalía de víctimas desaparecidas", subtitle: "9616172300-17541" },
-    { image: "assets/img/numbers/1.png", title: "Fiscalía de la mujer", subtitle: "9616172300-7427" },
     { image: "assets/img/numbers/1.png", title: "Centro para la prevención de adicciones (CENTRA)", subtitle: "9616172300-17496" },
     { image: "assets/img/numbers/1.png", title: "Módulo de atención inmediata (MAI)", subtitle: "9616125511-3503" },
     { image: "assets/img/numbers/1.png", title: "Centro de integración juvenil (CIJ)", subtitle: "9616181851" },
